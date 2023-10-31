@@ -16,7 +16,7 @@ const HEIGHT = 475
 //background variables
 var backgroundImage = new Image()
 backgroundImage.src = "background.png"
-
+hhiiii
 //arrow keys
 var leftKeyDown = false
 var rightKeyDown = false
