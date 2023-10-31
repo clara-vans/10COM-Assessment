@@ -45,8 +45,8 @@ var characterLeftImage = new Image ()
 characterLeftImage.src = "character-left.png"
 
 var isAlive = true
-var characterXPosition = 440
-var characterYPosition = 550
+var characterXPosition = 200
+var characterYPosition = 320
 var characterSpeed = 10
 
 //rock variables
@@ -88,8 +88,8 @@ function startCanvas(){
 function updateCanvas(){
 	ctx.clearRect(0,0,WIDTH, HEIGHT)
     ctx.drawImage(backgroundImage,0,0, WIDTH, HEIGHT);
-    ctx.drawImage(treeLeftImage, 190, -80, TREE_WIDTH, TREE_HEIGHT );
-    ctx.drawImage(treeRightImage, 320, -80, TREE_WIDTH, TREE_HEIGHT );
+    ctx.drawImage(treeLeftImage, 150, -80, TREE_WIDTH, TREE_HEIGHT );
+    ctx.drawImage(treeRightImage, 270, -80, TREE_WIDTH, TREE_HEIGHT );
     ctx.drawImage(rockImage, 230, 10, ROCK_WIDTH, ROCK_HEIGHT)
 
     //move character
@@ -101,11 +101,11 @@ function updateCanvas(){
       }
     
   //show correct character image for left and right
-  var turningWidth = 8
+  
   if (leftKeyDown) {
-    ctx.drawImage(characterLeftImage, characterXPosition, characterYPosition, CHARACTER_WIDTH + turningWidth, CHARACTER_HEIGHT)
+    ctx.drawImage(characterLeftImage, characterXPosition, characterYPosition, CHARACTER_WIDTH , CHARACTER_HEIGHT)
   } else if (rightKeyDown) {
-    ctx.drawImage(characterRightImage, characterXPosition, characterYPosition, CHARACTER_HEIGHT + turningWidth, CHARACTER_HEIGHT)
+    ctx.drawImage(characterRightImage, characterXPosition, characterYPosition, CHARACTER_HEIGHT , CHARACTER_HEIGHT)
   } else {
     ctx.drawImage(characterMiddleImage, characterXPosition, characterYPosition, CHARACTER_WIDTH, CHARACTER_HEIGHT)
   }
