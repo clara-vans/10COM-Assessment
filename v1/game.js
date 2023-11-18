@@ -123,7 +123,7 @@ function updateCanvas(){
       }
     
   //show correct character image for left and right
-  var turningWidth = 8
+  
   if (leftKeyDown) {
     ctx.drawImage(characterLeftImage, characterXPosition, characterYPosition, CHARACTER_WIDTH + turningWidth, CHARACTER_HEIGHT)
     //console.log("left");
